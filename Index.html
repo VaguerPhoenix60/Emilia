@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Valentine's Day</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 100px;
+		}
+		h1 {
+			font-size: 24px;
+		}
+		.container {
+			margin-top: 20px;
+		}
+		button {
+			font-size: 20px;
+			padding: 10px 20px;
+			border: none;
+			cursor: pointer;
+			margin: 10px;
+		}
+		#btnDa {
+			background-color: green;
+			color: white;
+			font-size: 20px;
+		}
+		#btnNu {
+			background-color: red;
+			color: white;
+		}
+		#imgContainer {
+			margin-top: 20px;
+			display: none;
+		}
+		img {
+			width: 300px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1 id="title">Vrea domișoara Emilia să fie partenera mea de Valentine's Day?</h1>
+	
+	<div class="container" id="buttonsContainer">
+		<button id="btnDa">DA</button>
+		<button id="btnNu">NU</button>
+	</div>
+
+	<div id="imgContainer">
+		<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2IxNzRvNmwwM3VhM3U5aDI1bHZldmFyaW1hZG03NnA3dmptbG9wZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/enrq327a3sMIJAS5jA/giphy.gif" alt="Romantic">
+	</div>
+
+	<script>
+		let btnDa = document.getElementById("btnDa");
+		let btnNu = document.getElementById("btnNu");
+		let imgContainer = document.getElementById("imgContainer");
+		let title = document.getElementById("title");
+		let buttonsContainer = document.getElementById("buttonsContainer");
+		let size = 20;
+
+		btnNu.addEventListener("click", function() {
+			size += 10; // Crește dimensiunea butonului "DA"
+			btnDa.style.fontSize = size + "px";
+		});
+
+		btnDa.addEventListener("click", function() {
+			title.style.display = "none"; // Ascunde titlul
+			buttonsContainer.style.display = "none"; // Ascunde butoanele
+			imgContainer.style.display = "block"; // Afișează imaginea și mesajul
+		});
+	</script>
+
+</body>
+</html>
